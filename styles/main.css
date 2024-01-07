@@ -179,11 +179,11 @@ body{
   height: fit-content;
   position: relative;
 }
-.item__description {
-  text-align: center;
-}
+
 .set-amount {
   margin-top: 5%;
+  display: flex;
+  align-items: center;
 }
 .set-amount input {
   width: 2vw;
@@ -193,10 +193,13 @@ body{
 }
 
 :is(.decrease, .increase) {
-  font-size: 1.2vw;
-  background-color: white;
+  font-size: 1.7vw;
+  font-weight: 600;
+  background-color: transparent;
+ color: white;
   padding: 2%;
   border: none;
+  cursor: pointer;
 }
 .amount__price {
   margin-top: 5%;
@@ -205,6 +208,12 @@ body{
 .delete {
   position: absolute;
   top: 45%;
+  font-size: 1.4vw;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  color: aliceblue;
   right: -5%;
 }
 
