@@ -12,13 +12,15 @@
 .header__container{
    width: 100%;
    margin-left: 0;
-   padding-left: 40%;
+   /* padding-left: 40%; */
 }
     /* products  */
     .products__container{
         display: grid;
         margin: 2% auto;
         grid-template-columns: 1fr;
+        max-height: 100%;
+        overflow-y: auto;
         
     }
 
