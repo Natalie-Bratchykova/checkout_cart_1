@@ -1,0 +1,46 @@
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* for mobile */
+@media screen and (max-width: 490px){
+    /* header */
+.header__container{
+   width: 100%;
+   margin-left: 0;
+   padding-left: 40%;
+}
+    /* products  */
+    .products__container{
+        display: grid;
+        margin: 2% auto;
+        grid-template-columns: 1fr;
+        
+    }
+
+    .product{
+        width: 80%;
+        padding-bottom: 4%;
+    }
+    .product img {
+        width: 60%;
+        height: fit-content;
+      }
+
+      .product__title {
+        font-size: 5vw;
+      }
+
+      .product__price{
+        font-size: 4.5vw;
+      }
+      .product__button{
+        font-size: 4.4vw;
+      }
+
+    /* cart */
+}

@@ -1,6 +1,4 @@
-/* *{
-    border: 1px solid purple;
-} */
+/* @import url("responsive.css"); */
 
 *,
 *::after,
@@ -47,6 +45,7 @@ body{
 .header__title {
   text-transform: uppercase;
   text-align: center;
+  font-size: 3vw;
   /* padding-top: 5%; */
   align-self: center;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
