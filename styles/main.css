@@ -90,6 +90,8 @@ body{
   row-gap: 3%;
   flex-wrap: wrap;
   justify-content: center;
+  max-height: 90vh;
+  overflow-y: scroll;
 }
 
 .product {
@@ -156,6 +158,7 @@ body{
 .cart__container {
   position: relative;
   height: 100%;
+ 
 }
 .cart__title {
   text-align: center;
@@ -164,6 +167,10 @@ body{
 }
 .cart__list {
   margin-top: 3%;
+  max-height: 70vh;
+  overflow-y: scroll;
+  overflow-x: visible;
+  /* width: 23vw; */
 }
 
 .item {
@@ -190,6 +197,8 @@ body{
   padding: 2%;
   text-align: center;
   font-size: 1.2vw;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 :is(.decrease, .increase) {
@@ -214,7 +223,11 @@ body{
   cursor: pointer;
   border: none;
   color: aliceblue;
-  right: -5%;
+  right: 5%;
+  transition: color .2s linear;
+}
+.delete:hover{
+    color: rgb(232, 31, 31);
 }
 
 .totalPrice {

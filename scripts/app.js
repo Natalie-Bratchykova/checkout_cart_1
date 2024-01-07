@@ -101,11 +101,7 @@ function generateContent() {
 generateContent();
 
 function addToCart(id) {
-  // specify place for showing
-
-  const elemsInCartIndicator = document.querySelector("#chosenAmount");
-  let listContent = "";
-
+ 
   // check if we have any elems in our cart
   if (checkoutList.length === 0) {
     checkoutList.push(...products.filter((el) => el.id === id));
@@ -118,11 +114,9 @@ function addToCart(id) {
     }
   }
 
-  //   cartListEl.innerHTML = listContent;
+  // call checkout list render function
   renderCheckoutList(checkoutList);
 
-  elemsInCartIndicator.textContent = checkoutList.length;
-  
   // update and render total price
   updateTotalPrice();
 
@@ -151,7 +145,18 @@ function renderCheckoutList(list) {
     `;
   });
 
-  cartListEl.innerHTML = listContent;
+  cartListEl.innerHTML = listContent;  
+  // call amount render function
+  renderAmountInCart(list.length)
+
+  // render total price
+  updateTotalPrice();
+}
+
+// render amount of elems in cart
+function renderAmountInCart(amount){
+    const elemsInCartIndicator = document.querySelector("#chosenAmount");
+    elemsInCartIndicator.textContent = amount;
 }
 
 // delete elems from list
@@ -163,6 +168,7 @@ function removeFromCart(id) {
   checkoutList.splice(removingElId, 1);
   console.log("After del array len = " + checkoutList.length);
   renderCheckoutList(checkoutList);
+
 }
 
 // increase amount
