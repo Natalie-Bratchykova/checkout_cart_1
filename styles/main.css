@@ -169,8 +169,11 @@ body{
 .item {
   display: flex;
   align-items: center;
+  position: relative;
+  margin-top: 6%;
   gap: 5%;
 }
+
 .item img {
   width: 5vw;
   height: fit-content;
@@ -201,7 +204,7 @@ body{
 
 .delete {
   position: absolute;
-  top: 10%;
+  top: 45%;
   right: -5%;
 }
 
