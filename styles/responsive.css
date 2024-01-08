@@ -1,4 +1,3 @@
-
 *,
 *::after,
 *::before {
@@ -7,60 +6,82 @@
   box-sizing: border-box;
 }
 /* for mobile */
-@media screen and (max-width: 490px){
-    /* header */
-.header__container{
-   width: 100%;
-   margin-left: 0;
-   padding-left: 40%;
-}
-    /* products  */
-    .products__container{
-        display: grid;
-        margin: 2% auto;
-        grid-template-columns: 1fr;
-        max-height: 100%;
-        overflow-y: auto;
-        margin-left: 20%;
-        
-    }
+@media screen and (max-width: 490px) {
+  /* header */
+ 
+  .header__title{
+    font-size: 5vw;
+  }
+  .header__checkout-cart i{
+    font-size: 3.5vw;
+  }
+  .checkout-cart__amount{
+    font-size: 3vw;
+    right: -50%;
+  }
 
-    .product{
-        width: 100%;
-        padding-bottom: 4%;
-    }
-    .product img {
-        width: 60%;
-        height: fit-content;
-      }
+  /* products  */
+  .products__container {
+    display: grid;
+    margin: 10% auto 0;
+    grid-template-columns: 1fr;
+    max-height: 100%;
+    overflow-y: auto;
+    margin-left: 5%;
+  }
 
-      .product__title {
-        font-size: 5vw;
-      }
+  .product {
+    width: 100%;
+    padding-bottom: 4%;
+  }
+  .product img {
+    width: 50%;
+    height: fit-content;
+  }
 
-      .product__price{
-        font-size: 4.5vw;
-      }
-      .product__button{
-        font-size: 4.4vw;
-      }
+  .product__title {
+    font-size: 5vw;
+  }
 
-    /* cart */
-    .my-cart {
-        transform: translateX(300%);
-        width: 100%;
-    }
-    .totalPrice{
-        font-size: 4vw;
-    }
+  .product__price {
+    font-size: 4.5vw;
+  }
+  .product__button {
+    font-size: 4.4vw;
+  }
 
-    .menu__item button {
-        font-size: 4vw;
-    }
+  /* cart */
+  .my-cart {
+    position: fixed;
+    transform: translateX(300%);
+    width: 100%;
+  }
+  .item img {
+    width: 20vw;
+  }
 
+  .item__title{
+    font-size: 6.3vw;
+  }
 
-    /* active classes */
-    .active .my-cart {
-        transform: translateX(25%);
-      }
+  .set-amount input{
+    font-size: 3vw;
+    width: 5vw;
+  }
+  :is(.decrease, .increase, .delete i) {
+    font-size: 6vw;
+  }
+
+  .totalPrice {
+    font-size: 6vw;
+  }
+
+  .menu__item button {
+    font-size: 4vw;
+  }
+
+  /* active classes */
+  .active .my-cart {
+    transform: translateX(25%);
+  }
 }
